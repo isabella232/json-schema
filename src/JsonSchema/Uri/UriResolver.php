@@ -109,7 +109,7 @@ class UriResolver implements UriResolverInterface
         if ($relativePath == '') {
             return $basePath;
         }
-        if ($relativePath{0} == '/') {
+        if (str_starts_with($relativePath, '/')) {
             return $relativePath;
         }
 
